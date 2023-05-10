@@ -1,5 +1,3 @@
-<script lang="ts">
-
 let colorBackCard = `#999`;
 
 // Tableau contenant les icônes à utiliser
@@ -23,18 +21,18 @@ const icons = [
     'green'
 ];
 
-let openedCards: any[] = []; // Tableau pour stocker les cartes ouvertes
+let openedCards = []; // Tableau pour stocker les cartes ouvertes
 let matchedCards = []; // Tableau pour stocker les cartes correspondantes
 
 // Fonction pour initialiser le jeu
 function initGame() {
-    const board: any = document.getElementById('memory-board');
+    const board = document.getElementById('memory-board');
 
     // Mélanger les icônes
     const shuffledIcons = shuffle(icons);
 
     // Générer les cartes
-    shuffledIcons.forEach((icon: string) => {
+    shuffledIcons.forEach(icon => {
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `<i class="${icon}"></i>`;
@@ -44,7 +42,7 @@ function initGame() {
 }
 
 // Fonction pour retourner une carte
-function flipCard(this: any) {
+function flipCard() {
     if (openedCards.length < 2 && !this.classList.contains('open')) {
         this.classList.add('open');
         openedCards.push(this);
@@ -84,7 +82,7 @@ function checkMatch() {
 }
 
 // Fonction pour mélanger un tableau
-function shuffle(array: any) {
+function shuffle(array) {
     let currentIndex = array.length;
     let temporaryValue, randomIndex;
 
@@ -102,10 +100,3 @@ function shuffle(array: any) {
 
 // Initialiser le jeu au chargement de la page
 initGame();
-
-</script>
-
-
-<div id="memory-board"></div>
-
-<p>coucou</p>
