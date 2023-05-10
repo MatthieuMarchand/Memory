@@ -1,24 +1,38 @@
 let colorBackCard = `#999`;
 
+const elementCountClick = document.getElementById("elementCountClick");
+let countClick = 0;
+
+function functionCountClick() {
+    countClick ++;
+    elementCountClick.innerHTML = countClick;
+}
+
 // Tableau contenant les icônes à utiliser
 const icons = [
-    'red',
-    'red',
-
+    'aqua',
     'blue',
-    'blue',
-
-    'orange',
-    'orange',
-
-    'purple',
-    'purple',
-
-    'yellow',
-    'yellow',
-
     'green',
-    'green'
+    'lime',
+    'maroon',
+    'navy',
+    'olive',
+    'purple',
+    'red',
+    'teal',
+    'yellow',
+
+    'aqua',
+    'blue',
+    'green',
+    'lime',
+    'maroon',
+    'navy',
+    'olive',
+    'purple',
+    'red',
+    'teal',
+    'yellow'
 ];
 
 let openedCards = []; // Tableau pour stocker les cartes ouvertes
@@ -44,6 +58,7 @@ function initGame() {
 // Fonction pour retourner une carte
 function flipCard() {
     if (openedCards.length < 2 && !this.classList.contains('open')) {
+        functionCountClick();
         this.classList.add('open');
         openedCards.push(this);
 
