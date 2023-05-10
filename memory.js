@@ -91,7 +91,8 @@ function checkMatch() {
 
     if (matchedCards.length === icons.length) {
         setTimeout(() => {
-            alert('Félicitations ! Vous avez gagné !');
+            isGameOver = true;
+            alert(`Félicitations ! Vous avez gagné en : ${time - 1} secondes`);
         }, 500);
     }
 }
