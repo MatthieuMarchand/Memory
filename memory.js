@@ -1,24 +1,12 @@
 let colorBackCard = `#999`;
 
+
+
 // Tableau contenant les icônes à utiliser
 const icons = [
     'red',
     'red',
 
-    'blue',
-    'blue',
-
-    'orange',
-    'orange',
-
-    'purple',
-    'purple',
-
-    'yellow',
-    'yellow',
-
-    'green',
-    'green'
 ];
 
 let openedCards = []; // Tableau pour stocker les cartes ouvertes
@@ -76,7 +64,8 @@ function checkMatch() {
 
     if (matchedCards.length === icons.length) {
         setTimeout(() => {
-            alert('Félicitations ! Vous avez gagné !');
+            isGameOver = true;
+            alert(`Félicitations ! Vous avez gagné en : ${time - 1} secondes`);
         }, 500);
     }
 }
