@@ -1,5 +1,7 @@
 let colorBackCard = `#999`;
 
+// level x = (4 + x * 2)
+
 const elementCountClick = document.getElementById("elementCountClick");
 let countClick = 0;
 
