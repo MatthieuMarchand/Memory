@@ -1,8 +1,6 @@
-//timer
 let time = 0;
 const timerElement = document.getElementById("timer");
 let isGameOver = false;
-
 
 function addTime(params) {
   timerElement.innerText = time;
@@ -10,7 +8,6 @@ function addTime(params) {
 }
 
 setInterval(() => {
-
   if(!isGameOver) {
     addTime();
   }
