@@ -2,7 +2,7 @@ let time = 0;
 const timerElement = document.getElementById("timer");
 let isGameOver = false;
 
-function addTime(params) {
+function addTime() {
   timerElement.innerText = time;
   time++;
 }
