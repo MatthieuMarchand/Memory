@@ -11,6 +11,9 @@ function functionCountClick() {
 let openedCards = []; // Tableau pour stocker les cartes ouvertes
 let matchedCards = []; // Tableau pour stocker les cartes correspondantes
 
+//afficher le niveau
+
+
 // Fonction pour initialiser le jeu
 function initGame() {
     const board = document.getElementById('memoryBoard');
