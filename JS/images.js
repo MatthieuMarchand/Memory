@@ -12,20 +12,12 @@ function loadRandomImages() {
     Promise.all(promises)
         .then(results => {
             images = results;
-            displayImages(); // Appel de la fonction pour afficher les images
+            images = images.concat(images);
+            initGame();
         })
             .catch(error => {
             console.log('Une erreur s\'est produite lors du chargement des images:', error);
         });
-}
-
-function displayImages() {
-    const grosseDiv = document.getElementById("grosseDiv");
-    images.forEach(image => {
-        const card = document.createElement('div');
-        card.innerHTML = `<img src="${image}">`;
-        grosseDiv.appendChild(card);
-    });
 }
 
 loadRandomImages();
