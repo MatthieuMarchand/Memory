@@ -88,4 +88,3 @@ function shuffle(array) {
 }
 
 // Initialiser le jeu au chargement de la page
-initGame();
