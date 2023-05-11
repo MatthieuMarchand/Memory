@@ -1,10 +1,7 @@
 let colorBackCard = `#999`;
 
-
-
 let openedCards = [];
 let matchedCards = [];
-
 
 // Fonction pour initialiser le jeu
 function initGame() {
@@ -62,7 +59,7 @@ function checkMatch() {
     }
 }
 
-// Fonction pour mélanger un tableau
+// Fonction pour mélanger les images
 function shuffle(array) {
     let currentIndex = array.length;
     let temporaryValue, randomIndex;
@@ -78,5 +75,3 @@ function shuffle(array) {
 
     return array;
 }
-
-// Initialiser le jeu au chargement de la page
