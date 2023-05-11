@@ -14,7 +14,7 @@ let matchedCards = []; // Tableau pour stocker les cartes correspondantes
 // Fonction pour initialiser le jeu
 function initGame() {
     const board = document.getElementById('memoryBoard');
-
+    board.innerHTML = "";
     // Mélanger les icônes
     const shuffledImages = shuffle(images);
 
