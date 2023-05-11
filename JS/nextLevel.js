@@ -12,5 +12,6 @@ function nextLevel() {
   countClick = 0;
   time = 0;
   isGameOver = false;
+  usedImages = [];
   loadRandomImages();
 }

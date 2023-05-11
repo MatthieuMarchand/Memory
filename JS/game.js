@@ -1,17 +1,9 @@
 let colorBackCard = `#999`;
 
-const elementCountClick = document.getElementById("elementCountClick");
-let countClick = 0;
 
-function functionCountClick() {
-    countClick ++;
-    elementCountClick.innerHTML = countClick;
-}
 
-let openedCards = []; // Tableau pour stocker les cartes ouvertes
-let matchedCards = []; // Tableau pour stocker les cartes correspondantes
-
-//afficher le niveau
+let openedCards = [];
+let matchedCards = [];
 
 
 // Fonction pour initialiser le jeu
