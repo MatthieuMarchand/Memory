@@ -14,7 +14,10 @@ function initGame() {
     shuffledImages.forEach(image => {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.innerHTML = `<img src="${image}">`;
+        card.innerHTML = `
+                <img src="${image}">
+                <div class="cover"></div>
+        `;
         card.addEventListener('click', flipCard);
         board.appendChild(card);
     });
@@ -43,9 +46,7 @@ function checkMatch() {
         matchedCards.push(card1, card2);
     } else {
         card1.classList.remove('open');
-        card1.style.background = colorBackCard;
         card2.classList.remove('open');
-        card2.style.background = colorBackCard;
     }
 
     openedCards = [];
