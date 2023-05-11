@@ -1,5 +1,3 @@
-
-
 let images = [];
 
 function loadRandomImages() {
