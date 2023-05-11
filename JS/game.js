@@ -13,7 +13,7 @@ let matchedCards = []; // Tableau pour stocker les cartes correspondantes
 
 // Fonction pour initialiser le jeu
 function initGame() {
-    const board = document.getElementById('memory-board');
+    const board = document.getElementById('memoryBoard');
 
     // Mélanger les icônes
     const shuffledImages = shuffle(images);
@@ -34,10 +34,6 @@ function flipCard() {
         functionCountClick();
         this.classList.add('open');
         openedCards.push(this);
-
-        const imageName = this.querySelector('i').className;
-        this.style.background = `${imageName}`;
-
         if (openedCards.length === 2) {
             setTimeout(checkMatch, 500);
         }
