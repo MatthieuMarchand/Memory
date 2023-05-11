@@ -8,34 +8,6 @@ function functionCountClick() {
     elementCountClick.innerHTML = countClick;
 }
 
-
-// Tableau contenant les icônes à utiliser
-const icons = [
-    'aqua',
-    'blue',
-    'green',
-    'lime',
-    'maroon',
-    'navy',
-    'olive',
-    'purple',
-    'red',
-    'teal',
-    'yellow',
-
-    'aqua',
-    'blue',
-    'green',
-    'lime',
-    'maroon',
-    'navy',
-    'olive',
-    'purple',
-    'red',
-    'teal',
-    'yellow'
-];
-
 let openedCards = []; // Tableau pour stocker les cartes ouvertes
 let matchedCards = []; // Tableau pour stocker les cartes correspondantes
 
@@ -44,13 +16,13 @@ function initGame() {
     const board = document.getElementById('memory-board');
 
     // Mélanger les icônes
-    const shuffledIcons = shuffle(icons);
+    const shuffledImages = shuffle(images);
 
     // Générer les cartes
-    shuffledIcons.forEach(icon => {
+    shuffledImages.forEach(image => {
         const card = document.createElement('div');
         card.classList.add('card');
-        card.innerHTML = `<i class="${icon}"></i>`;
+        card.innerHTML = `<img src="${image}">`;
         card.addEventListener('click', flipCard);
         board.appendChild(card);
     });
@@ -63,8 +35,8 @@ function flipCard() {
         this.classList.add('open');
         openedCards.push(this);
 
-        const iconName = this.querySelector('i').className;
-        this.style.background = `${iconName}`;
+        const imageName = this.querySelector('i').className;
+        this.style.background = `${imageName}`;
 
         if (openedCards.length === 2) {
             setTimeout(checkMatch, 500);
@@ -90,7 +62,7 @@ function checkMatch() {
 
     openedCards = [];
 
-    if (matchedCards.length === icons.length) {
+    if (matchedCards.length === images.length) {
         setTimeout(() => {
             isGameOver = true;
             alert(`Félicitations ! Vous avez gagné en : ${time - 1} secondes`);
