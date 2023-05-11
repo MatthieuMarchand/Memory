@@ -65,7 +65,8 @@ function checkMatch() {
     if (matchedCards.length === images.length) {
         setTimeout(() => {
             isGameOver = true;
-            alert(`Félicitations ! Vous avez gagné en : ${time - 1} secondes`);
+            document.getElementById("nextLevel").style.display = "block";
+            // alert(`Félicitations ! Vous avez gagné en : ${time - 1} secondes`);
         }, 500);
     }
 }
