@@ -1,4 +1,3 @@
-let level = 1;
 let numImages = 4 + level * 2;
 
 let images = [];
