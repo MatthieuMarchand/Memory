@@ -3,6 +3,8 @@ let colorBackCard = `#999`;
 let openedCards = [];
 let matchedCards = [];
 
+
+
 // Fonction pour initialiser le jeu
 function initGame() {
     const board = document.getElementById('memoryBoard');
@@ -56,6 +58,7 @@ function checkMatch() {
             isGameOver = true;
             document.getElementById("nextLevel").style.display = "block";
             // alert(`Félicitations ! Vous avez gagné en : ${time - 1} secondes`);
+
         }, 500);
     }
 }
