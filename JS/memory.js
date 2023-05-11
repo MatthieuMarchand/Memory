@@ -8,6 +8,7 @@ function functionCountClick() {
     elementCountClick.innerHTML = countClick;
 }
 
+
 // Tableau contenant les icônes à utiliser
 const icons = [
     'aqua',
