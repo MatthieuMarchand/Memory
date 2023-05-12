@@ -16,6 +16,7 @@ function initGame() {
         card.classList.add('card');
         card.innerHTML = `
                 <img src="${image}">
+                <div class="reflection"></div>
                 <div class="cover"></div>
         `;
         card.addEventListener('click', flipCard);

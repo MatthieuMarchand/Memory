@@ -9,7 +9,8 @@
     width: 120px;
     height: 120px;
     margin: 5px;
-    img, div {
+    overflow: hidden;
+    img, .cover {
         backface-visibility: hidden;
         transition-duration: 0.4s;
         transition-timing-function: ease;
@@ -21,7 +22,7 @@
         object-fit: cover;
         transform: rotateY(180deg);
     }
-    div {
+    .cover {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -33,9 +34,25 @@
     transition-duration: 0.6s;
     transform: rotateY(0deg);
 }
-.open div {
+.open .cover {
     transition-duration: 0.6s;
     transform: rotateY(-180deg);
+}
+
+.reflection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 0px;
+    background: rgba($color: white, $alpha: 0.3);
+    box-shadow: 0 0 20px 10px rgba($color: white, $alpha: 0.3);
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    transform: translate(10px, -10px) rotateZ(45deg);
+}
+.card:hover .reflection {
+    transform: translate(-150px, 150px) rotateZ(45deg);
 }
 
 .nextLevel {

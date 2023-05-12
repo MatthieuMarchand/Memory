@@ -1,7 +1,7 @@
 const elementCountClick = document.getElementById("elementCountClick");
 let countClick = 0;
 let minNumClicks = numImagesPairs * 4 - 2;
-let maxNumClicks = minNumClicks * 4;
+let maxNumClicks = minNumClicks * 2;
 let clickScore;
 
 function functionCountClick() {
