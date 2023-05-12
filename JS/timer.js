@@ -1,6 +1,5 @@
-let time = 0;
 const timerElement = document.getElementById("timer");
-let isGameOver = false;
+let time = 0;
 
 function addTime() {
   timerElement.innerText = time;

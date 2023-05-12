@@ -11,7 +11,7 @@
     margin: 5px;
     img, div {
         backface-visibility: hidden;
-        transition-duration: 0.6s;
+        transition-duration: 0.4s;
         transition-timing-function: ease;
     }
     img {
@@ -30,16 +30,18 @@
     }
 }
 .open img {
+    transition-duration: 0.6s;
     transform: rotateY(0deg);
 }
 .open div {
+    transition-duration: 0.6s;
     transform: rotateY(-180deg);
 }
 
 .nextLevel {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 800px;
     left: 50%;
     transform: translate(-50%, -50%);
 }

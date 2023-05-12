@@ -1,9 +1,7 @@
-let colorBackCard = `#999`;
+let isGameOver = false;
 
 let openedCards = [];
 let matchedCards = [];
-
-
 
 // Fonction pour initialiser le jeu
 function initGame() {
@@ -41,11 +39,11 @@ function flipCard() {
 function checkMatch() {
     const card1 = openedCards[0];
     const card2 = openedCards[1];
-
     if (card1.innerHTML === card2.innerHTML) {
         card1.classList.add('match');
         card2.classList.add('match');
         matchedCards.push(card1, card2);
+        console.log(matchedCards);
     } else {
         card1.classList.remove('open');
         card2.classList.remove('open');
@@ -55,10 +53,10 @@ function checkMatch() {
 
     if (matchedCards.length === images.length) {
         setTimeout(() => {
+            clickScore = ((maxNumClicks - countClick) / (maxNumClicks - minNumClicks)) * 100;
             isGameOver = true;
             document.getElementById("nextLevel").style.display = "block";
-            // alert(`Félicitations ! Vous avez gagné en : ${time - 1} secondes`);
-
+            alert(`Tu as fini en ${time - 1} secondes et en ${countClick} click; Votre score est de ${clickScore.toFixed(0)}%`);
         }, 500);
     }
 }
