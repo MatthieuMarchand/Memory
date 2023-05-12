@@ -1,6 +1,5 @@
-let textLevel = document.getElementById("level");
-
 // Initialise le jeu
+let textLevel = document.getElementById("level");
 let numberLevel = parseInt(localStorage.getItem('numberLevel'));
 
 if (isNaN(numberLevel)) {
@@ -16,6 +15,8 @@ localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]
 
 //fait apparaître le nombre du niveau sur la page
 textLevel.innerHTML = numberLevel;
+
+
 
 //fin du niveau et chargement du niveau suivant
 function endLevel() {
@@ -53,6 +54,7 @@ function endLevel() {
   loadRandomImages();
 }
 
+//Pour initialiser les datas
 function setData() {
   window[dataLevel] = JSON.parse(localStorage.getItem(`level${numberLevel}Data`));
 

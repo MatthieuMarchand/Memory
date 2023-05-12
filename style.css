@@ -54,4 +54,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.boutonNiveau {
+  opacity: 50%;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
