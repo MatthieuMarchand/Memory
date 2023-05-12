@@ -3,7 +3,7 @@ let numImagesPairs;
 
 function loadRandomImages() {
     let promises = [];
-    numImagesPairs = level * 2 + 4;
+    numImagesPairs = numberLevel * 2 + 4;
     for (let i = 0; i < numImagesPairs; i++) {
         promises.push(getRandomImage());
     }
