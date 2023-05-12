@@ -2,7 +2,9 @@ let images = [];
 
 function loadRandomImages() {
     let promises = [];
-    let numImages = 4 + level * 2;
+    // let numImages = 4 + numberLevel * 2;
+    let numImages = numberLevel * 2;
+
 
     for (let i = 0; i < numImages; i++) {
         promises.push(getRandomImage());

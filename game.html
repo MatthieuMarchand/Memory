@@ -10,13 +10,14 @@
 <body>
     <p>Vous êtes au niveau : <span id="level"></span></p>
     <!-- <H2> You are at level <span id="level"></span> <script></script></H2> -->
-    <button class="nextLevel"id="nextLevel" onclick="nextLevel()">Niveau suivant</button>
     <div id="elementCountClick">0</div>
     <div id="timer">0</div>
     <div id="memoryBoard"></div>
 
     <div id="grosseDiv"></div>
-    <script src="JS/nextLevel.js"></script>
+
+    <button class="nextLevel"id="nextLevel" onclick="endLevel()">Niveau suivant</button>
+    <script src="JS/level.js"></script>
     <script src="JS/apiPexels.js"></script>
     <script src="JS/timer.js"></script>
     <script src="JS/countClick.js"></script>
