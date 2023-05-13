@@ -48,10 +48,13 @@ function endLevel() {
   textLevel.innerHTML = numberLevel;
   countClick = 0;
   time = 0;
+  matchedCards = [];
   isGameOver = false;
   document.getElementById("nextLevel").style.display = "none";
   usedImages = [];
   loadRandomImages();
+  minNumClicks = numImagesPairs * 4 - 2;
+  maxNumClicks = minNumClicks * 2;
 }
 
 //Pour initialiser les datas

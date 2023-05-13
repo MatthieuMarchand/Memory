@@ -44,7 +44,6 @@ function checkMatch() {
         card1.classList.add('match');
         card2.classList.add('match');
         matchedCards.push(card1, card2);
-        console.log(matchedCards);
     } else {
         card1.classList.remove('open');
         card2.classList.remove('open');
