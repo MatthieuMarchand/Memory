@@ -46,13 +46,15 @@ function endLevel() {
   numberLevel += 1;
   localStorage.setItem('numberLevel', numberLevel);
   textLevel.innerHTML = numberLevel;
-  countClick = 0;
-  time = 0;
   isGameOver = false;
   document.getElementById("nextLevel").style.display = "none";
   usedImages = [];
   matchedCards = [];
   loadRandomImages();
+  time = 0;
+  countClick = 0;
+  elementCountClick.innerHTML = countClick;
+  console.log(countClick);
 }
 
 //Pour initialiser les datas
