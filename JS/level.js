@@ -51,6 +51,7 @@ function endLevel() {
   isGameOver = false;
   document.getElementById("nextLevel").style.display = "none";
   usedImages = [];
+  matchedCards = [];
   loadRandomImages();
 }
 
