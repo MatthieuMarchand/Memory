@@ -5,7 +5,6 @@ for (let i = 1; i <= completedLevels; i++) {
   let levelPlayed = true;
   let bouton = document.getElementById(`boutonNiveau${i}`);
   let textScoreLevel = document.getElementById(`levelStat${i}`);
-  console.log(textScoreLevel);
   let dataLevel = JSON.parse(localStorage.getItem(`level${i}Data`));
   let levelTime = dataLevel.dataTime;
   let levelClicks = dataLevel.dataCountClick;

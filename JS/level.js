@@ -22,10 +22,19 @@ textLevel.innerHTML = numberLevel;
 function endLevel() {
 
   window[dataLevel] = JSON.parse(localStorage.getItem(`level${numberLevel}Data`));
+  console.log(numberLevel);
+  console.log(window[dataLevel]);
 
-  if (window[dataLevel].dataTime == null && window[dataLevel].dataCountClick == null) {
+  if (window[dataLevel] == null) {
     window[dataLevel] = {
-      dataTime: time,
+      dataTime: time - 1,
+      dataCountClick: countClick
+    };
+    localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]));
+  }
+  else if (window[dataLevel].dataTime == null && window[dataLevel].dataCountClick == null) {
+    window[dataLevel] = {
+      dataTime: time - 1,
       dataCountClick: countClick
     };
     localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]));
@@ -34,7 +43,7 @@ function endLevel() {
   else if (window[dataLevel].dataTime >= time && window[dataLevel].dataCountClick >= countClick){
     console.log("Nouveau record");
     window[dataLevel] = {
-      dataTime: time,
+      dataTime: time - 1,
       dataCountClick: countClick
     };
     localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]));
