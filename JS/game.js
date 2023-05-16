@@ -55,6 +55,9 @@ function checkMatch() {
     if (matchedCards.length === images.length || cheatCode == true) {
         setTimeout(() => {
             clickScore = ((maxNumClicks - countClick) / (maxNumClicks - minNumClicks)) * 100;
+            if (clickScore > 100) {
+                clickScore = 100;
+            }
             isGameOver = true;
             victoryMessage();
         }, 500);

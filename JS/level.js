@@ -28,14 +28,16 @@ function endLevel() {
   if (window[dataLevel] == null) {
     window[dataLevel] = {
       dataTime: time - 1,
-      dataCountClick: countClick
+      dataCountClick: countClick,
+      dataClickScore: clickScore
     };
     localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]));
   }
   else if (window[dataLevel].dataTime == null && window[dataLevel].dataCountClick == null) {
     window[dataLevel] = {
       dataTime: time - 1,
-      dataCountClick: countClick
+      dataCountClick: countClick,
+      dataClickScore: clickScore
     };
     localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]));
     console.log("New data set");
@@ -44,7 +46,8 @@ function endLevel() {
     console.log("Nouveau record");
     window[dataLevel] = {
       dataTime: time - 1,
-      dataCountClick: countClick
+      dataCountClick: countClick,
+      dataClickScore: clickScore
     };
     localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]));
   }
@@ -74,7 +77,8 @@ function setData() {
   if (!window[dataLevel]) {
     window[dataLevel] = {
       dataTime: null,
-      dataCountClick: null
+      dataCountClick: null,
+      dataClickScore: null
     };
 }
   console.log(window[dataLevel]);
