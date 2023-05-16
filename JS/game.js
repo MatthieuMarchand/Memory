@@ -1,4 +1,5 @@
 let isGameOver = false;
+let cheatCode = false;
 
 let openedCards = [];
 let matchedCards = [];
@@ -51,12 +52,11 @@ function checkMatch() {
 
     openedCards = [];
 
-    if (matchedCards.length === images.length) {
+    if (matchedCards.length === images.length || cheatCode == true) {
         setTimeout(() => {
             clickScore = ((maxNumClicks - countClick) / (maxNumClicks - minNumClicks)) * 100;
             isGameOver = true;
-            document.getElementById("nextLevel").style.display = "block";
-            alert(`Tu as fini en ${time - 1} secondes et en ${countClick} click; Votre score est de ${clickScore.toFixed(0)}%`);
+            victoryMessage();
         }, 500);
     }
 }
@@ -77,3 +77,15 @@ function shuffle(array) {
 
     return array;
 }
+
+function victoryMessage() {
+  document.getElementById("nextLevel").style.display = "flex";
+  document.getElementById("victoryMessage").innerHTML = `Tu as fini en ${time - 1} secondes et en ${countClick} click; Votre score est de ${clickScore.toFixed(0)}%`;
+}
+
+//cheatCode
+document.addEventListener("keydown", function(event) {
+  if (event.code === "Space") {
+    cheatCode = true;
+  }
+});

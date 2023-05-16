@@ -56,9 +56,16 @@
 }
 
 .nextLevel {
-    display: none;
-    position: fixed;
-    top: 800px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(240, 227, 176);
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
