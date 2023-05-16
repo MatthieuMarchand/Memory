@@ -1,3 +1,11 @@
+h1 {
+  @include ZX80();
+}
+
+p {
+  @include ZX80();
+}
+
 main {
   display: flex;
   flex-direction: column;

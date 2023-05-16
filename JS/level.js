@@ -22,8 +22,6 @@ textLevel.innerHTML = numberLevel;
 function endLevel() {
 
   window[dataLevel] = JSON.parse(localStorage.getItem(`level${numberLevel}Data`));
-  console.log(numberLevel);
-  console.log(window[dataLevel]);
 
   if (window[dataLevel] == null) {
     window[dataLevel] = {

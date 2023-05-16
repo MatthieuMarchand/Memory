@@ -1,0 +1,4 @@
+@mixin ZX80($size: 60){
+  font-family:  "ZX80";
+  font-size: #{$size}px;
+}
