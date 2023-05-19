@@ -10,10 +10,6 @@ h2 {
   margin: 10px;
 }
 
-// #levelButtons {
-
-// }
-
 .boutonNiveau {
   display: flex;
   flex-direction: column;
@@ -28,10 +24,7 @@ h2 {
   transition-duration: .2s;
   p:first-child {
     font-size: 30px;
-  }
-  p:last-child {
-    font-size: 20px;
-    margin-top: 5px;
+    margin-bottom: 5px;
   }
 }
 .boutonNiveau:hover {
