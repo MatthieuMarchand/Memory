@@ -20,19 +20,21 @@ h2 {
   justify-content: center;
   align-items: center;
   background: $vertCitron;
-  width: 250px;
+  width: 200px;
   height: 75px;
   border: solid 3px $black;
   border-radius: 15px;
+  box-shadow: 0 0 0 0 $black;
   transition-duration: .2s;
   p:first-child {
     font-size: 30px;
   }
   p:last-child {
     font-size: 20px;
+    margin-top: 5px;
   }
 }
 .boutonNiveau:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 3px 3px 0 0 $black;
+  transform: translate(-4px, -4px); // ? pas la même valeur que pour le bouton "home" dans "game" (décalage de 4px au lieu de 3px)
+  box-shadow: 4px 4px 0 0 $black;
 }

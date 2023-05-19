@@ -85,7 +85,7 @@ function shuffle(array) {
 
 function victoryMessage() {
     document.getElementById("nextLevel").style.display = "flex";
-    document.getElementById("victoryMessage").innerHTML = `Tu as fini en ${time - 1} secondes et en ${countClick} click; Votre score est de ${clickScore.toFixed(0)}%`;
+    document.getElementById("victoryMessage").innerHTML = `Tu as fini en ${time - 1} secondes et en ${countClick} click !`;
 }
 
 //cheatCode

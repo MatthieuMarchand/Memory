@@ -21,7 +21,7 @@ for (let i = 1; i <= completedLevels; i++) {
     textScoreLevel.textContent = `${levelTime}s - ${levelClicks} clicks`;
   }
   else {
-    textScoreLevel.innerHTML = "Jouez pour établir un score !";
+    textScoreLevel.innerHTML = "Jouez !";
   }
 
   bouton.style.pointerEvents = "all";

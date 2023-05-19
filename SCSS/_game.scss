@@ -9,6 +9,7 @@
     border: solid 3px $black;
     border-radius: 30px;
     background-color: #00AEEF;
+    box-shadow: 0 0 0 0 $black;
     transition-duration: .2s;
 }
 .home:hover {
@@ -24,6 +25,7 @@
 
 #nextLevel {
     display: none;
+
     flex-direction: column;
     text-align: center;
     align-items: center;

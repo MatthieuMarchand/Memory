@@ -24,7 +24,7 @@
   transition-duration: 0.4s;
   transition-timing-function: ease;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 4px #101010;
+  box-shadow: inset 0 0 0 3px #101010;
 }
 .card .image {
   position: absolute;
@@ -115,6 +115,7 @@
   border: solid 3px #101010;
   border-radius: 30px;
   background-color: #00AEEF;
+  box-shadow: 0 0 0 0 #101010;
   transition-duration: 0.2s;
 }
 
@@ -163,10 +164,11 @@ h2 {
   justify-content: center;
   align-items: center;
   background: #A4C639;
-  width: 250px;
+  width: 200px;
   height: 75px;
   border: solid 3px #101010;
   border-radius: 15px;
+  box-shadow: 0 0 0 0 #101010;
   transition-duration: 0.2s;
 }
 .boutonNiveau p:first-child {
@@ -174,11 +176,12 @@ h2 {
 }
 .boutonNiveau p:last-child {
   font-size: 20px;
+  margin-top: 5px;
 }
 
 .boutonNiveau:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 3px 3px 0 0 #101010;
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 0 #101010;
 }
 
 * {
