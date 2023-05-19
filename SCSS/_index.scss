@@ -1,19 +1,38 @@
 h1 {
-  @include ZX80();
+  font-family:  "PPPangramSansRounded-Bold", "impact";
+  font-size: 5vw;
+  text-align: center;
+}
+h2 {
+  font-family:  "PPPangramSansRounded-Bold", "impact";
+  font-size: 2.5vw;
+  text-align: center;
+  margin: 10px;
 }
 
-p {
-  @include ZX80();
-}
+// #levelButtons {
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+// }
 
 .boutonNiveau {
-  opacity: 50%;
-  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $vertCitron;
+  width: 250px;
+  height: 75px;
+  border: solid 3px $black;
+  border-radius: 15px;
+  transition-duration: .2s;
+  p:first-child {
+    font-size: 30px;
+  }
+  p:last-child {
+    font-size: 20px;
+  }
+}
+.boutonNiveau:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 0 $black;
 }

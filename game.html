@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Memory</title>
 </head>
 <body>
-    <a href="index.html"><Button>Revenir à l'accueil</Button></a>
-    <p>Vous êtes au niveau : <span id="level"></span></p>
-    <!-- <H2> You are at level <span id="level"></span> <script></script></H2> -->
-    <div id="elementCountClick">0</div>
-    <div id="timer">0</div>
-    <div id="memoryBoard"></div>
-    <div id= "nextLevel" class="nextLevel" >
-      <h2 id="victoryMessage">
+<main>
+  <a class="home" href="index.html">Home</a>
 
-      </h2>
-      <button id="nextLevel" onclick="endLevel()">Niveau suivant</button>
+  <p>Niveau : <span id="level"></span></p>
+  <p>Nombre de click : <span id="elementCountClick">0</span></p>
+  <p>Temps : <span id="timer">0</span></p>
+
+  <div id="memoryBoard"></div>
+
+  <div id="nextLevel">
+    <div>
+      <h2 id="victoryMessage"></h2>
+      <button id="nextLevel" onclick="endLevel()">Niveau suivant !</button>
     </div>
+  </div>
 
+  <p class="legalMention">© 2023 - <a href="#" target="_blank">Loïc Leforestier</a> et <a href="https://matthieumarchand.netlify.app/" target="_blank">Matthieu Marchand</a>. Tous droits réservés.</p>
 
-    <script src="JS/level.js"></script>
-    <script src="JS/apiPexels.js"></script>
-    <script src="JS/timer.js"></script>
-    <script src="JS/images.js"></script>
-    <script src="JS/countClick.js"></script>
-    <script src="JS/game.js"></script>
+  <script src="JS/level.js"></script>
+  <script src="JS/apiPexels.js"></script>
+  <script src="JS/timer.js"></script>
+  <script src="JS/images.js"></script>
+  <script src="JS/countClick.js"></script>
+  <script src="JS/game.js"></script>
+</main>
 </body>
 </html>

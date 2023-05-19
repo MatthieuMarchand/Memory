@@ -1,26 +1,32 @@
 @font-face {
-  font-family: ZX80;
-  src: url(/Assets/ZX80.ttf);
+  font-family: "PPPangramSansRounded-Bold";
+  src: url(/Assets/fonts/PANGRAM/PPPangramSansRounded-Bold.otf);
 }
-* {
-  perspective: 1500px;
+@font-face {
+  font-family: "PPPangramSansRounded-Semibold";
+  src: url(/Assets/fonts/PANGRAM/PPPangramSansRounded-Semibold.otf);
 }
-
+@font-face {
+  font-family: "PPPangramSansRounded-ExtraboldItalic";
+  src: url(/Assets/fonts/PANGRAM/PPPangramSansRounded-ExtraboldItalic.otf);
+}
 .card {
   cursor: pointer;
   position: relative;
-  display: inline-block;
   width: 120px;
   height: 120px;
+  border-radius: 10px;
   margin: 5px;
   overflow: hidden;
 }
-.card img, .card .cover {
+.card .image, .card .cover {
   backface-visibility: hidden;
   transition-duration: 0.4s;
   transition-timing-function: ease;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 4px #101010;
 }
-.card img {
+.card .image {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -32,11 +38,18 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #999;
+  background: #FF4081;
   transform: rotateY(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .cover .pointDinterrogation {
+  width: 50%;
+  height: 50%;
 }
 
-.open img {
+.open .image {
   transition-duration: 0.6s;
   transform: rotateY(0deg);
 }
@@ -54,16 +67,69 @@
   height: 0px;
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.3);
-  transition-duration: 0.25s;
-  transition-timing-function: ease;
+  transition-duration: 0s;
   transform: translate(10px, -10px) rotateZ(45deg);
 }
 
 .card:hover .reflection {
+  transition-duration: 0.4s;
   transform: translate(-150px, 150px) rotateZ(45deg);
 }
 
-.nextLevel {
+@media (max-width: 560px) {
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (max-width: 440px) {
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 400px) {
+  .card {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 360px) {
+  .card {
+    width: 60px;
+    height: 60px;
+  }
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  border: solid 3px #101010;
+  border-radius: 30px;
+  background-color: #00AEEF;
+  transition-duration: 0.2s;
+}
+
+.home:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 0 #101010;
+}
+
+#memoryBoard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#nextLevel {
   display: none;
   flex-direction: column;
   text-align: center;
@@ -79,23 +145,114 @@
 }
 
 h1 {
-  font-family: "ZX80";
-  font-size: 60px;
+  font-family: "PPPangramSansRounded-Bold", "impact";
+  font-size: 5vw;
+  text-align: center;
 }
 
-p {
-  font-family: "ZX80";
-  font-size: 60px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+h2 {
+  font-family: "PPPangramSansRounded-Bold", "impact";
+  font-size: 2.5vw;
+  text-align: center;
+  margin: 10px;
 }
 
 .boutonNiveau {
-  opacity: 50%;
-  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #A4C639;
+  width: 250px;
+  height: 75px;
+  border: solid 3px #101010;
+  border-radius: 15px;
+  transition-duration: 0.2s;
+}
+.boutonNiveau p:first-child {
+  font-size: 30px;
+}
+.boutonNiveau p:last-child {
+  font-size: 20px;
+}
+
+.boutonNiveau:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 0 #101010;
+}
+
+* {
+  perspective: 1500px;
+  color: #101010;
+}
+
+p {
+  font-family: "PPPangramSansRounded-Bold", "impact";
+  font-size: 20px;
+}
+
+a {
+  font-family: "PPPangramSansRounded-ExtraboldItalic", "impact";
+  font-size: 20px;
+}
+
+a, li, ul {
+  text-decoration: none;
+}
+
+body {
+  background-color: #F8F8F8;
+}
+
+main {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-height: calc(100vh - 20px);
+}
+
+.legalMention {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  font-family: "PPPangramSansRounded-Semibold", "impact";
+  font-size: 14px;
+}
+.legalMention a {
+  font-family: "PPPangramSansRounded-Semibold", "impact";
+  font-size: 14px;
+  padding-bottom: 1px;
+  border-bottom: solid 1px #101010;
+}
+
+@media (max-width: 560px) {
+  .legalMention {
+    font-family: "PPPangramSansRounded-Semibold", "impact";
+    font-size: 12px;
+  }
+  .legalMention a {
+    font-family: "PPPangramSansRounded-Semibold", "impact";
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .legalMention {
+    font-family: "PPPangramSansRounded-Semibold", "impact";
+    font-size: 10px;
+  }
+  .legalMention a {
+    font-family: "PPPangramSansRounded-Semibold", "impact";
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .legalMention {
+    font-family: "PPPangramSansRounded-Semibold", "impact";
+    font-size: 8px;
+  }
+  .legalMention a {
+    font-family: "PPPangramSansRounded-Semibold", "impact";
+    font-size: 8px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -2,3 +2,68 @@
 @import 'SCSS/variables';
 @import 'SCSS/game';
 @import 'SCSS/index';
+
+* {
+    perspective: 1500px;
+    color: $black
+}
+
+p {
+    @include PPPangramSansRounded-Bold;
+}
+a {
+    @include PPPangramSansRounded-ExtraboldItalic;
+}
+
+a, li, ul {
+    text-decoration: none;
+}
+
+body {
+    background-color: $bodyBackgroundColor;
+}
+
+main {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: calc(100vh - 20px);
+}
+
+.legalMention {
+    position: absolute;
+    bottom: 5px; // ? peut changer
+    width: 100%;
+    text-align: center;
+    @include PPPangramSansRounded-Semibold(14);
+    a {
+        @include PPPangramSansRounded-Semibold(14);
+        padding-bottom: 1px;
+        border-bottom: solid 1px $black;
+    }
+}
+
+@media (max-width: 560px) {
+    .legalMention {
+        @include PPPangramSansRounded-Semibold(12);
+        a{
+            @include PPPangramSansRounded-Semibold(12);
+        }
+    }
+}
+@media (max-width: 480px) {
+    .legalMention {
+        @include PPPangramSansRounded-Semibold(10);
+        a{
+            @include PPPangramSansRounded-Semibold(10);
+        }
+    }
+}
+@media (max-width: 400px) {
+    .legalMention {
+        @include PPPangramSansRounded-Semibold(8);
+        a{
+            @include PPPangramSansRounded-Semibold(8);
+        }
+    }
+}

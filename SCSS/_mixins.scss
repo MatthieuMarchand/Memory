@@ -1,4 +1,12 @@
-@mixin ZX80($size: 60){
-  font-family:  "ZX80";
+@mixin PPPangramSansRounded-Bold($size: 20){
+  font-family:  "PPPangramSansRounded-Bold", "impact";
+  font-size: #{$size}px;
+}
+@mixin PPPangramSansRounded-Semibold($size: 20){
+  font-family:  "PPPangramSansRounded-Semibold", "impact";
+  font-size: #{$size}px;
+}
+@mixin PPPangramSansRounded-ExtraboldItalic($size: 20){
+  font-family:  "PPPangramSansRounded-ExtraboldItalic", "impact";
   font-size: #{$size}px;
 }

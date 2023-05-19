@@ -1,71 +1,38 @@
-* {
-    perspective: 1500px;
+@import 'cards';
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    border: solid 3px $black;
+    border-radius: 30px;
+    background-color: #00AEEF;
+    transition-duration: .2s;
+}
+.home:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px 0 0 $black;
 }
 
-.card {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    width: 120px;
-    height: 120px;
-    margin: 5px;
-    overflow: hidden;
-    img, .cover {
-        backface-visibility: hidden;
-        transition-duration: 0.4s;
-        transition-timing-function: ease;
-    }
-    img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: rotateY(180deg);
-    }
-    .cover {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: $colorBackCard;
-        transform: rotateY(0deg);
-    }
-}
-.open img {
-    transition-duration: 0.6s;
-    transform: rotateY(0deg);
-}
-.open .cover {
-    transition-duration: 0.6s;
-    transform: rotateY(-180deg);
+#memoryBoard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.reflection {
+#nextLevel {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240, 227, 176);
+    height: 400px;
+    width: 400px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 0px;
-    background: rgba($color: white, $alpha: 0.3);
-    box-shadow: 0 0 30px 10px rgba($color: white, $alpha: 0.3);
-    transition-duration: 0.25s;
-    transition-timing-function: ease;
-    transform: translate(10px, -10px) rotateZ(45deg);
-}
-.card:hover .reflection {
-    transform: translate(-150px, 150px) rotateZ(45deg);
-}
-
-.nextLevel {
-  display: none;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(240, 227, 176);
-  height: 400px;
-  width: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

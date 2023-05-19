@@ -16,9 +16,11 @@ function initGame() {
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-                <img src="${image}">
+                <img class="image" src="${image}">
                 <div class="reflection"></div>
-                <div class="cover"></div>
+                <div class="cover">
+                    <img class="pointDinterrogation" src="Assets/point-dinterrogation.png" alt="point d'interrogation">
+                </div>
         `;
         card.addEventListener('click', flipCard);
         board.appendChild(card);
@@ -82,13 +84,13 @@ function shuffle(array) {
 }
 
 function victoryMessage() {
-  document.getElementById("nextLevel").style.display = "flex";
-  document.getElementById("victoryMessage").innerHTML = `Tu as fini en ${time - 1} secondes et en ${countClick} click; Votre score est de ${clickScore.toFixed(0)}%`;
+    document.getElementById("nextLevel").style.display = "flex";
+    document.getElementById("victoryMessage").innerHTML = `Tu as fini en ${time - 1} secondes et en ${countClick} click; Votre score est de ${clickScore.toFixed(0)}%`;
 }
 
 //cheatCode
 document.addEventListener("keydown", function(event) {
-  if (event.code === "Space") {
+    if (event.code === "Space") {
     cheatCode = true;
-  }
+    }
 });

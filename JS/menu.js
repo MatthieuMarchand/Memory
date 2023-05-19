@@ -4,8 +4,10 @@ const levelButtons = document.getElementById('levelButtons');
 
 for (let i = 1; i < numberLevel + 1; i++) {
     levelButtons.innerHTML += `
-        <a id ="boutonNiveau${i}" href="game.html" class="boutonNiveau" onclick="play(this.id)"><button>niveau ${i}</button></a>
-        <p id="levelStat${i}"></p>
+      <a id ="boutonNiveau${i}" href="game.html" class="boutonNiveau" onclick="play(this.id)">
+          <p>Level ${i}</p>
+          <p id="levelStat${i}"></p>
+      </a>
     `;
 }
 
@@ -16,7 +18,7 @@ for (let i = 1; i <= completedLevels; i++) {
   let levelTime = dataLevel.dataTime;
   let levelClicks = dataLevel.dataCountClick;
   if (levelTime || levelClicks != null) {
-    textScoreLevel.textContent = `Time : ${levelTime} Number of clicks : ${levelClicks}`;
+    textScoreLevel.textContent = `${levelTime}s - ${levelClicks} clicks`;
   }
   else {
     textScoreLevel.innerHTML = "Jouez pour établir un score !";

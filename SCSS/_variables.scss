@@ -1,5 +1,38 @@
-$colorBackCard: #999;
+$black: #101010;
+$bodyBackgroundColor: #F8F8F8; //? ou sinon #F5F5F5
+
+// ! Palette de couleurs vives
+$bleuVif : #00AEEF;
+$vertCitron : #A4C639;
+$roseBonbon : #FF80CE;
+$orangeEclatant : #FF6F00;
+$violetVif : #9C27B0;
+$jauneLumineux : #FFEB3B;
+$rougeVif : #FF1744;
+$vertPomme : #8BC34A;
+$bleuTurquoise : #00BCD4;
+$roseFlamant : #FF4081;
+
+// ! Test pas concluant
+// @font-face {
+//   font-family: 'KALMANSK';
+//   src: url(/Assets/fonts/KALMANSK.otf);
+// }
+// @font-face {
+//   font-family: 'SaoTorpes';
+//   src: url(/Assets/fonts/SaoTorpes.otf);
+// }
+
+// ! Typo qui m'ont semblé pertinente
 @font-face {
-  font-family: ZX80;
-  src: url(/Assets/ZX80.ttf);
+  font-family: 'PPPangramSansRounded-Bold';
+  src: url(/Assets/fonts/PANGRAM/PPPangramSansRounded-Bold.otf);
+}
+@font-face {
+  font-family: 'PPPangramSansRounded-Semibold';
+  src: url(/Assets/fonts/PANGRAM/PPPangramSansRounded-Semibold.otf);
+}
+@font-face {
+  font-family: 'PPPangramSansRounded-ExtraboldItalic';
+  src: url(/Assets/fonts/PANGRAM/PPPangramSansRounded-ExtraboldItalic.otf);
 }
