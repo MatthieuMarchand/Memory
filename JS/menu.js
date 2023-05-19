@@ -3,6 +3,7 @@ let completedLevels = localStorage.length - 1;
 const levelButtons = document.getElementById('levelButtons');
 
 for (let i = 1; i < numberLevel + 1; i++) {
+  console.log(numberLevel); // ! a enlever
     levelButtons.innerHTML += `
       <a id ="boutonNiveau${i}" href="game.html" class="boutonNiveau" onclick="play(this.id)">
           <p>Level ${i}</p>
@@ -29,6 +30,8 @@ for (let i = 1; i <= completedLevels; i++) {
 }
 
 function play(buttonId) {
-  numberLevel = parseInt(buttonId.slice(-1));
+  console.log(buttonId);
+  numberLevel = parseInt(buttonId.match(/boutonNiveau(\d+)/)[1]);
+  console.log(numberLevel);
   localStorage.setItem('numberLevel', numberLevel);
 }

@@ -1,6 +1,7 @@
 // Initialise le jeu
 let textLevel = document.getElementById("level");
 let numberLevel = parseInt(localStorage.getItem('numberLevel'));
+// let currentLevel
 
 if (isNaN(numberLevel)) {
   numberLevel = 1;
