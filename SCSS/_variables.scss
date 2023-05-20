@@ -1,5 +1,6 @@
 $black: #101010;
-$bodyBackgroundColor: #F8F8F8; //? ou sinon #F5F5F5
+$bodyBackgroundColor: #F8F8F8; //? ou #F5F5F5
+$borderRadius: 10px; // ? ou 15px
 
 // ! Palette de couleurs vives
 $bleuVif : #00AEEF;
@@ -12,16 +13,6 @@ $rougeVif : #FF1744;
 $vertPomme : #8BC34A;
 $bleuTurquoise : #00BCD4;
 $roseFlamant : #FF4081;
-
-// ! Test pas concluant
-// @font-face {
-//   font-family: 'KALMANSK';
-//   src: url(/Assets/fonts/KALMANSK.otf);
-// }
-// @font-face {
-//   font-family: 'SaoTorpes';
-//   src: url(/Assets/fonts/SaoTorpes.otf);
-// }
 
 // ! Typo qui m'ont semblé pertinente
 @font-face {

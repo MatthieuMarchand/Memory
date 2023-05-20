@@ -26,7 +26,7 @@ h2 {
   width: 200px;
   height: 75px;
   border: solid 3px $black;
-  border-radius: 15px;
+  border-radius: $borderRadius;
   box-shadow: 0 0 0 0 $black;
   transition-duration: .2s;
   p:first-child {
