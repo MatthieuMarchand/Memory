@@ -8,9 +8,8 @@ if (isNaN(numberLevel)) {
 }
 
 //Cherche s'il y a des données pour le niveau actuel sinon il en stocke des null
-let dataLevel = `level${numberLevel}Data`
+let dataLevel = `level${numberLevel}Data`;
 setData();
-localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]));
 
 
 //fait apparaître le nombre du niveau sur la page
@@ -19,8 +18,23 @@ textLevel.innerHTML = numberLevel;
 
 
 //fin du niveau et chargement du niveau suivant
-function endLevel() {
+function nextLevel() {
 
+  textLevel.innerHTML = numberLevel;
+  isGameOver = false;
+  document.getElementById("nextLevel").style.display = "none";
+  usedImages = [];
+  matchedCards = [];
+  loadRandomImages();
+  minNumClicks = numImagesPairs * 4 - 2;
+  maxNumClicks = minNumClicks * 2;
+  time = 0;
+  countClick = 0;
+  elementCountClick.innerHTML = countClick;
+}
+
+
+function endLevel() {
   window[dataLevel] = JSON.parse(localStorage.getItem(`level${numberLevel}Data`));
 
   if (window[dataLevel] == null) {
@@ -52,20 +66,10 @@ function endLevel() {
   else {
     console.log("Votre temps n'est pas aussi bon qu'avant");
   }
-
   numberLevel += 1;
   localStorage.setItem('numberLevel', numberLevel);
-  textLevel.innerHTML = numberLevel;
-  isGameOver = false;
-  document.getElementById("nextLevel").style.display = "none";
-  usedImages = [];
-  matchedCards = [];
-  loadRandomImages();
-  minNumClicks = numImagesPairs * 4 - 2;
-  maxNumClicks = minNumClicks * 2;
-  time = 0;
-  countClick = 0;
-  elementCountClick.innerHTML = countClick;
+  console.log(numberLevel);
+  setData();
 }
 
 //Pour initialiser les datas
@@ -79,4 +83,7 @@ function setData() {
       dataClickScore: null
     };
   }
+
+  localStorage.setItem(`level${numberLevel}Data`, JSON.stringify(window[dataLevel]));
+
 }
