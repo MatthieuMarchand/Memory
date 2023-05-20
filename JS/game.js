@@ -61,6 +61,7 @@ function checkMatch() {
                 clickScore = 100;
             }
             isGameOver = true;
+            endLevel();
             victoryMessage();
         }, 500);
     }
