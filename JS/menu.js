@@ -2,7 +2,7 @@ let completedLevels = localStorage.length - 1;
 
 const levelButtons = document.getElementById('levelButtons');
 
-for (let i = 1; i < currentLevel + 1; i++) {
+for (let i = 1; i < completedLevels + 1; i++) {
     levelButtons.innerHTML += `
       <a id ="boutonNiveau${i}" href="game.html" class="boutonNiveau" onclick="play(this.id)">
           <p>Level ${i}</p>
@@ -18,7 +18,7 @@ for (let i = 1; i <= completedLevels; i++) {
   let levelTime = dataLevel.dataTime;
   let levelClicks = dataLevel.dataCountClick;
   if (levelTime || levelClicks != null) {
-    textScoreLevel.textContent = `Score : ${levelTime}s - ${levelClicks} clicks`;
+    textScoreLevel.textContent = `Score : ${levelTime}s - ${levelClicks} clics`;
   }
   else {
     textScoreLevel.innerHTML = "Jouez !";

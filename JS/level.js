@@ -1,27 +1,6 @@
 // Initialise le jeu
 let textLevel = document.getElementById("level");
 let numberLevel = parseInt(localStorage.getItem('numberLevel'));
-let currentLevel = getMaxLevelNumber();
-
-// Récupérer le level max de l'utilisateur
-function getMaxLevelNumber() {
-  var maxNumber = 0;
-
-  // Parcours de toutes les clés du localStorage
-  for (var key in localStorage) {
-    if (localStorage.hasOwnProperty(key)) {
-      // Vérification si la clé correspond au format "level nombre Data"
-      if (/^level\d+Data$/.test(key)) {
-        var number = parseInt(key.match(/\d+/)[0]);
-        if (number > maxNumber) {
-          maxNumber = number;
-        }
-      }
-    }
-  }
-
-  return maxNumber;
-}
 
 if (isNaN(numberLevel)) {
   numberLevel = 1;
