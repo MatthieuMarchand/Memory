@@ -92,9 +92,10 @@ function victoryMessage() {
 //cheatCode
 document.addEventListener("keydown", function(event) {
     if (event.code === "Space") {
-    cheatCode = true;
-    isGameOver = true;
-    victoryMessage();
-    cheatCode = false;
+        cheatCode = true;
+        isGameOver = true;
+        endLevel();
+        victoryMessage();
+        cheatCode = false;
     }
 });
