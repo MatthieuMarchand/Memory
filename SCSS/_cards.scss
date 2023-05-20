@@ -1,7 +1,6 @@
 .card {
     cursor: pointer;
     position: relative;
-    // display: inline-block;
     width: 120px;
     height: 120px;
     border-radius: 10px;
@@ -9,6 +8,7 @@
     overflow: hidden;
     // background-color: $black;
     // box-shadow: 3px 3px $black, inset 3px 3px $bodyBackgroundColor;
+    transition-duration: 0.2s;
     .image, .cover {
         backface-visibility: hidden;
         transition-duration: 0.4s;
@@ -60,6 +60,9 @@
 .card:hover .reflection {
     transition-duration: 0.4s;
     transform: translate(-150px, 150px) rotateZ(45deg);
+}
+.card:hover {
+    scale: 1.05;
 }
 
 .match {
