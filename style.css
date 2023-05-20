@@ -175,15 +175,52 @@
 }
 
 #nextLevel {
+  display: none;
   position: fixed;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+
+.divVictoryMessage {
+  position: absolute;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
-  background-color: #00AEEF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   height: 200px;
-  width: 200px;
+  width: 400px;
   border: solid 3px #101010;
   border-radius: 10px;
+  background-color: #00AEEF;
+  transform-origin: center;
+  transition-duration: 0.4s;
+}
+.divVictoryMessage h2 {
+  font-size: 20px;
+}
+.divVictoryMessage button {
+  width: 200px;
+  height: 75px;
+  border: solid 3px #101010;
+  border-radius: 10px;
+  background: #A4C639;
+  box-shadow: 0 0 0 0 #101010, 0 0 0 0 #101010;
+  transition-duration: 0.2s;
+}
+.divVictoryMessage button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 0 #101010;
+}
+
+.divVictoryMessage:hover {
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 h1 {
@@ -241,7 +278,7 @@ h2 {
   color: #101010;
 }
 
-p {
+p, button {
   font-family: "PPPangramSansRounded-Bold", "impact";
   font-size: 20px;
 }
