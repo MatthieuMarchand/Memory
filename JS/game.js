@@ -54,7 +54,7 @@ function checkMatch() {
 
     openedCards = [];
 
-    if (matchedCards.length === images.length || cheatCode == true) {
+    if (matchedCards.length === images.length) {
         setTimeout(() => {
             clickScore = ((maxNumClicks - countClick) / (maxNumClicks - minNumClicks)) * 100;
             if (clickScore > 100) {
@@ -92,5 +92,8 @@ function victoryMessage() {
 document.addEventListener("keydown", function(event) {
     if (event.code === "Space") {
     cheatCode = true;
+    isGameOver = true;
+    victoryMessage();
+    cheatCode = false;
     }
 });

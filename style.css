@@ -18,6 +18,7 @@
   border-radius: 10px;
   margin: 5px;
   overflow: hidden;
+  transition-duration: 0.2s;
 }
 .card .image, .card .cover {
   backface-visibility: hidden;
@@ -76,6 +77,10 @@
   transform: translate(-150px, 150px) rotateZ(45deg);
 }
 
+.card:hover {
+  scale: 1.05;
+}
+
 .match {
   animation: match 0.7s ease-in-out;
 }
@@ -121,10 +126,19 @@
     height: 60px;
   }
 }
+#mainGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 70px;
   height: 30px;
   border: solid 3px #101010;
@@ -144,6 +158,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 #gameInfo p:first-child {
@@ -155,6 +170,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 1040px;
 }
 
 #nextLevel {
