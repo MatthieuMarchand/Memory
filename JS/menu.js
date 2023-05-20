@@ -18,7 +18,7 @@ for (let i = 1; i <= completedLevels; i++) {
   let levelTime = dataLevel.dataTime;
   let levelClicks = dataLevel.dataCountClick;
   if (levelTime || levelClicks != null) {
-    textScoreLevel.textContent = `${levelTime}s - ${levelClicks} clicks`;
+    textScoreLevel.textContent = `Score : ${levelTime}s - ${levelClicks} clicks`;
   }
   else {
     textScoreLevel.innerHTML = "Jouez !";
