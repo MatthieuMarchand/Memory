@@ -17,7 +17,7 @@
     height: 30px;
     border: solid 3px $black;
     border-radius: 30px;
-    background-color: #00AEEF;
+    background-color: $bleuVif;
     box-shadow: 0 0 0 0 $black;
     transition-duration: .2s;
 }
@@ -44,6 +44,7 @@
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1040px;
+    margin-bottom: 50px;
 }
 
 #nextLevel {
@@ -52,7 +53,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: rgb(240, 227, 176);
+    background-color: $bleuVif;
     height: 400px;
     width: 400px;
     position: absolute;
