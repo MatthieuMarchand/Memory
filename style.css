@@ -175,7 +175,6 @@
 }
 
 #nextLevel {
-  display: none;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -199,7 +198,7 @@ h2 {
   font-family: "PPPangramSansRounded-Bold", "impact";
   font-size: 2.5vw;
   text-align: center;
-  margin: 10px;
+  margin: 20px;
 }
 
 .container {
@@ -237,8 +236,17 @@ h2 {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 50px;
+  justify-content: center;
 }
 
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
 * {
   perspective: 1500px;
   color: #101010;
