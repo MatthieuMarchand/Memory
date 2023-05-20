@@ -3,7 +3,7 @@
     position: relative;
     width: 120px;
     height: 120px;
-    border-radius: 10px;
+    border-radius: $borderRadius;
     margin: 5px;
     overflow: hidden;
     // background-color: $black;
@@ -13,7 +13,7 @@
         backface-visibility: hidden;
         transition-duration: 0.4s;
         transition-timing-function: ease;
-        border-radius: 10px;
+        border-radius: $borderRadius;
         box-shadow: inset 0 0 0 3px $black;
     }
     .image {

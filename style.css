@@ -175,18 +175,15 @@
 }
 
 #nextLevel {
-  display: none;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  background-color: #00AEEF;
-  height: 400px;
-  width: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
+  background-color: #00AEEF;
+  height: 200px;
+  width: 200px;
+  border: solid 3px #101010;
+  border-radius: 10px;
 }
 
 h1 {
@@ -218,7 +215,7 @@ h2 {
   width: 200px;
   height: 75px;
   border: solid 3px #101010;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 0 0 0 0 #101010;
   transition-duration: 0.2s;
 }
