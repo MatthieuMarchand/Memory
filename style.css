@@ -76,6 +76,21 @@
   transform: translate(-150px, 150px) rotateZ(45deg);
 }
 
+.match {
+  animation: match 0.7s ease-in-out;
+}
+
+@keyframes match {
+  from {
+    box-shadow: 0 0 0 0 #A4C639;
+  }
+  50% {
+    box-shadow: 0 0 5px 5px #A4C639;
+  }
+  to {
+    box-shadow: 0 0 0 0 #A4C639;
+  }
+}
 @media (max-width: 560px) {
   .card {
     width: 100px;
@@ -191,6 +206,13 @@ h2 {
 .boutonNiveau:hover {
   transform: translate(-4px, -4px);
   box-shadow: 4px 4px 0 0 #101010;
+}
+
+#levelButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 50px;
 }
 
 * {

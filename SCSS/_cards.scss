@@ -62,6 +62,22 @@
     transform: translate(-150px, 150px) rotateZ(45deg);
 }
 
+.match {
+    animation: match .7s ease-in-out;
+}
+
+@keyframes match {
+    from {
+        box-shadow: 0 0 0 0 $vertCitron;
+    }
+    50% {
+        box-shadow: 0 0 5px 5px $vertCitron;
+    }
+    to {
+        box-shadow: 0 0 0 0 $vertCitron;
+    }
+}
+
 @media (max-width: 560px) {
     .card {
         width: 100px;
