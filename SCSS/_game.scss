@@ -17,7 +17,7 @@
     height: 30px;
     border: solid 3px $black;
     border-radius: 30px;
-    background-color: $bleuVif;
+    background-color: $bleuTurquoise;
     box-shadow: 0 0 0 0 $black;
     transition-duration: .2s;
 }
@@ -69,30 +69,53 @@
     align-items: center;
 
     height: 200px;
-    width: 400px;
+    width: 85vw;
+    max-width: 400px;
     border: solid 3px $black;
     border-radius: $borderRadius;
     background-color: $bleuVif;
     transform-origin: center;
     transition-duration: 0.4s;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
     h2 {
         font-size: 20px;
     }
     button {
-        width: 200px;
-        height: 75px;
+        cursor: pointer;
+        width: 120px;
+        height: 55px;
         border: solid 3px $black;
         border-radius: $borderRadius;
         background: $vertCitron;
         box-shadow: 0 0 0 0 $black, 0 0 0 0 $black;
         transition-duration: .2s;
+        margin-left: 15px;
     }
     button:hover {
         transform: translate(-4px, -4px); // ? pas la même valeur que pour le bouton "home" dans "game" (décalage de 4px au lieu de 3px)
         box-shadow: 4px 4px 0 0 $black;
     }
+
+    .buttonHome {
+        width: 120px;
+        height: 55px;
+        border: solid 3px $black;
+        border-radius: $borderRadius;
+        background: $bleuTurquoise;
+        box-shadow: 0 0 0 0 $black, 0 0 0 0 $black;
+        transition-duration: .2s;
+        margin-right: 15px;
+    }
 }
 
-.divVictoryMessage:hover {
-    transform: translate(-50%, -50%) scale(1.05);
-}
+//trop d'animation
+
+// .divVictoryMessage:hover {
+//     transform: translate(-50%, -50%) scale(1.05);
+// }
