@@ -251,13 +251,13 @@
   background-color: #F8F8F8;
 }
 #loader div {
-  padding: 0.7vh;
   overflow: hidden;
   border-bottom: solid 0.4vw #101010;
   transform-origin: left;
   animation: loaderBorder 1.5s ease;
 }
 #loader p {
+  padding: 0.7vw;
   font-size: 7vw;
   animation: loaderText 2s ease;
 }
