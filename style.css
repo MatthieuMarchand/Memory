@@ -186,7 +186,7 @@
 }
 
 .divVictoryMessage {
-  position: absolute;
+  position: fixed;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
@@ -276,6 +276,11 @@
   justify-content: center;
 }
 
+@media (max-width: 458px) {
+  #levelButtons {
+    flex-wrap: wrap-reverse;
+  }
+}
 h1 {
   font-family: "PPPangramSansRounded-Bold", "impact";
   font-size: 5vw;

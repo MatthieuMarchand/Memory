@@ -35,3 +35,9 @@
   margin-top: 50px;
   justify-content: center;
 }
+
+@media (max-width: 458px) {
+  #levelButtons {
+    flex-wrap: wrap-reverse;
+  }
+}
