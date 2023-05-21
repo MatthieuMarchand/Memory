@@ -251,7 +251,7 @@
   background-color: #F8F8F8;
 }
 #loader div {
-  padding: 0.7vw;
+  padding: 0.7vh;
   overflow: hidden;
   border-bottom: solid 0.4vw #101010;
   transform-origin: left;
