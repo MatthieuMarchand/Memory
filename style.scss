@@ -32,7 +32,7 @@ main {
 
 .legalMention {
     position: absolute;
-    bottom: 5px; // ? peut changer
+    bottom: 10px; // ? peut changer
     width: 100%;
     text-align: center;
     @include PPPangramSansRounded-Semibold(14);
@@ -59,11 +59,11 @@ main {
         }
     }
 }
-@media (max-width: 400px) {
-    .legalMention {
-        @include PPPangramSansRounded-Semibold(8);
-        a{
-            @include PPPangramSansRounded-Semibold(8);
-        }
-    }
-}
+  @media (max-width: 400px) {
+      .legalMention {
+          @include PPPangramSansRounded-Semibold(8);
+          a{
+              @include PPPangramSansRounded-Semibold(8);
+          }
+      }
+  }

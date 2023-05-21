@@ -277,7 +277,7 @@ main {
 
 .legalMention {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   width: 100%;
   text-align: center;
   font-family: "PPPangramSansRounded-Semibold", "impact";
