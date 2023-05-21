@@ -195,45 +195,47 @@
   justify-content: space-evenly;
   align-items: center;
   height: 200px;
-  width: 400px;
+  width: 85vw;
+  max-width: 400px;
   border: solid 3px #101010;
   border-radius: 10px;
-  background-color: #00AEEF;
+  background-color: #00BCD4;
   transform-origin: center;
   transition-duration: 0.4s;
+}
+.divVictoryMessage div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .divVictoryMessage h2 {
   font-size: 20px;
 }
 .divVictoryMessage button {
-  width: 200px;
-  height: 75px;
+  cursor: pointer;
+  width: 120px;
+  height: 55px;
   border: solid 3px #101010;
   border-radius: 10px;
   background: #A4C639;
   box-shadow: 0 0 0 0 #101010, 0 0 0 0 #101010;
   transition-duration: 0.2s;
+  margin-left: 15px;
 }
 .divVictoryMessage button:hover {
   transform: translate(-4px, -4px);
   box-shadow: 4px 4px 0 0 #101010;
 }
-
-.divVictoryMessage:hover {
-  transform: translate(-50%, -50%) scale(1.05);
-}
-
-h1 {
-  font-family: "PPPangramSansRounded-Bold", "impact";
-  font-size: 5vw;
-  text-align: center;
-}
-
-h2 {
-  font-family: "PPPangramSansRounded-Bold", "impact";
-  font-size: 2.5vw;
-  text-align: center;
-  margin: 20px;
+.divVictoryMessage .buttonHome {
+  width: 120px;
+  height: 55px;
+  border: solid 3px #101010;
+  border-radius: 10px;
+  background: #00AEEF;
+  box-shadow: 0 0 0 0 #101010, 0 0 0 0 #101010;
+  transition-duration: 0.2s;
+  margin-right: 15px;
 }
 
 .container {
@@ -274,14 +276,19 @@ h2 {
   justify-content: center;
 }
 
-@media (max-width: 1000px) {
-  h1 {
-    font-size: 36px;
-  }
-  h2 {
-    font-size: 18px;
-  }
+h1 {
+  font-family: "PPPangramSansRounded-Bold", "impact";
+  font-size: 5vw;
+  text-align: center;
 }
+
+h2 {
+  font-family: "PPPangramSansRounded-Bold", "impact";
+  font-size: 2.5vw;
+  text-align: center;
+  margin: 20px;
+}
+
 * {
   perspective: 1500px;
   color: #101010;
@@ -327,6 +334,14 @@ main {
   border-bottom: solid 1px #101010;
 }
 
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
 @media (max-width: 560px) {
   .legalMention {
     font-family: "PPPangramSansRounded-Semibold", "impact";

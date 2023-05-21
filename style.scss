@@ -3,6 +3,18 @@
 @import 'SCSS/game';
 @import 'SCSS/index';
 
+h1 {
+  font-family:  "PPPangramSansRounded-Bold", "impact";
+  font-size: 5vw;
+  text-align: center;
+}
+h2 {
+  font-family:  "PPPangramSansRounded-Bold", "impact";
+  font-size: 2.5vw;
+  text-align: center;
+  margin: 20px;
+}
+
 * {
     perspective: 1500px;
     color: $black
@@ -41,6 +53,17 @@ main {
         padding-bottom: 1px;
         border-bottom: solid 1px $black;
     }
+}
+
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 560px) {
