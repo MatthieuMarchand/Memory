@@ -277,7 +277,7 @@
 }
 @keyframes loaderText {
   from {
-    transform: translateY(100%);
+    transform: translateY(110%);
   }
   60% {
     transform: translateY(100%);
