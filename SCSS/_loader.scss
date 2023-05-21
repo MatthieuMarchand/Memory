@@ -1,0 +1,48 @@
+#loader {
+    position: sticky;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-color: $bodyBackgroundColor;
+    div{
+        padding: .7vw;
+        overflow: hidden;
+        border-bottom: solid .4vw $black;
+        transform-origin: left;
+        animation: loaderBorder 1.5s ease;
+    }
+    p {
+        font-size: 7vw;
+        animation: loaderText 2s ease;
+    }
+}
+.fonduOut {
+    opacity: 0;
+    transition: opacity .6s ease-out;
+}
+@keyframes loaderBorder {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+@keyframes loaderText {
+    from {
+        transform: translateY(100%);
+    }
+    60% {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
