@@ -86,8 +86,9 @@ function shuffle(array) {
 
 function victoryMessage() {
     document.getElementById("nextLevel").style.display = "flex";
-    document.getElementById("victoryMessage").innerHTML = `Tu as fini en ${time - 1} secondes et en ${countClick} click !`;
+    document.getElementById("victoryMessage").innerHTML = `Tu as fini en ${time - 1} secondes et en ${countClick} clics`;
 }
+
 
 //cheatCode
 document.addEventListener("keydown", function(event) {
