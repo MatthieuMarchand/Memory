@@ -49,19 +49,21 @@
 
 #nextLevel {
     display: none;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: -20px;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     backdrop-filter: blur(3px);
 }
 
 .divVictoryMessage {
     position: sticky;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    // top: 50vh;
+    // left: 50vw;
+    // transform: translate(-50%, -50%);
 
     display: flex;
     flex-direction: column;
@@ -78,10 +80,10 @@
     transition-duration: 0.4s;
 
     div {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
     h2 {
         font-size: 20px;
@@ -113,9 +115,3 @@
         margin-right: 15px;
     }
 }
-
-//trop d'animation
-
-// .divVictoryMessage:hover {
-//     transform: translate(-50%, -50%) scale(1.05);
-// }

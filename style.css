@@ -176,20 +176,19 @@
 
 #nextLevel {
   display: none;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: -20px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
 }
 
 .divVictoryMessage {
   position: sticky;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -309,7 +308,7 @@ h2 {
 .boutonNiveau {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background: #A4C639;
   width: 200px;
@@ -321,7 +320,6 @@ h2 {
 }
 .boutonNiveau p:first-child {
   font-size: 30px;
-  margin-bottom: 5px;
 }
 
 .boutonNiveau:hover {
@@ -335,11 +333,25 @@ h2 {
   gap: 10px;
   margin-top: 50px;
   justify-content: center;
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 @media (max-width: 458px) {
   #levelButtons {
     flex-wrap: wrap-reverse;
+  }
+}
+@media (max-width: 1000px) {
+  .boutonNiveau {
+    width: 133.3333333333px;
+    height: 50px;
+  }
+  .boutonNiveau p:first-child {
+    font-size: 20px;
+  }
+  .boutonNiveau p:last-child {
+    font-size: 12px;
   }
 }
 h1 {
@@ -387,7 +399,7 @@ main {
 
 .legalMention {
   position: absolute;
-  bottom: 10px;
+  bottom: 8px;
   width: 100%;
   text-align: center;
   font-family: "PPPangramSansRounded-Semibold", "impact";

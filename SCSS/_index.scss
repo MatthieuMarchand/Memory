@@ -22,7 +22,7 @@ h2 {
 .boutonNiveau {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background: $vertCitron;
   width: 200px;
@@ -33,7 +33,6 @@ h2 {
   transition-duration: .2s;
   p:first-child {
     font-size: 30px;
-    margin-bottom: 5px;
   }
 }
 .boutonNiveau:hover {
@@ -47,10 +46,25 @@ h2 {
   gap: 10px;
   margin-top: 50px;
   justify-content: center;
+  margin-left: 8vw;
+  margin-right: 8vw;
 }
 
 @media (max-width: 458px) {
   #levelButtons {
     flex-wrap: wrap-reverse;
+  }
+}
+
+@media (max-width: 1000px) {
+  .boutonNiveau {
+    width: calc(200px/1.5);
+    height: calc(75px/1.5);
+    p:first-child {
+      font-size: 20px;
+    }
+    p:last-child {
+      font-size: 12px;
+    }
   }
 }

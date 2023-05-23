@@ -4,15 +4,15 @@
 @import 'SCSS/index';
 
 h1 {
-  font-family:  "PPPangramSansRounded-Bold", "impact";
-  font-size: 5vw;
-  text-align: center;
+    font-family:  "PPPangramSansRounded-Bold", "impact";
+    font-size: 5vw;
+    text-align: center;
 }
 h2 {
-  font-family:  "PPPangramSansRounded-Bold", "impact";
-  font-size: 2.5vw;
-  text-align: center;
-  margin: 20px;
+    font-family:  "PPPangramSansRounded-Bold", "impact";
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 20px;
 }
 
 * {
@@ -44,7 +44,7 @@ main {
 
 .legalMention {
     position: absolute;
-    bottom: 10px; // ? peut changer
+    bottom: 8px; // ? peut changer
     width: 100%;
     text-align: center;
     @include PPPangramSansRounded-Semibold(14);
@@ -57,13 +57,13 @@ main {
 
 
 @media (max-width: 1000px) {
-  h1 {
-    font-size: 36px;
-  }
+    h1 {
+        font-size: 36px;
+    }
 
-  h2 {
-    font-size: 18px;
-  }
+    h2 {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 560px) {
@@ -82,11 +82,11 @@ main {
         }
     }
 }
-  @media (max-width: 400px) {
-      .legalMention {
-          @include PPPangramSansRounded-Semibold(8);
-          a{
-              @include PPPangramSansRounded-Semibold(8);
-          }
-      }
-  }
+@media (max-width: 400px) {
+    .legalMention {
+        @include PPPangramSansRounded-Semibold(8);
+        a{
+            @include PPPangramSansRounded-Semibold(8);
+        }
+    }
+}
